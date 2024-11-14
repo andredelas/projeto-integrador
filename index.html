@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas no Bairro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Problemas no Bairro</h1>
+        <nav>
+            <ul>
+                <li><a href="#tab1" class="tab-link">Calçadas sem acessibilidade</a></li>
+                <li><a href="#tab2" class="tab-link">Lixo e Saneamento</a></li>
+                <li><a href="#tab3" class="tab-link">Iluminação Pública</a></li>
+                <li><a href="#tab4" class="tab-link">Buracos nas Ruas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tab1" class="tab-content">
+            <h2>Calçadas sem acessibilidade</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="acess1.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Calçada estreita e sem rampas para cadeirantes.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="acess2.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Obstrução na calçada dificultando a passagem de pedestres.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="3.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Pavimento irregular causando risco de quedas.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="77.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Buracos e rachaduras nas calçadas.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="78.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Calçada sem acessibilidade para deficientes visuais.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="4.jpeg" alt="Problema nas calçadas">
+                    <p class="description">Árvores invadindo o espaço da calçada, tornando-a inacessível.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab2" class="tab-content">
+            <h2>Lixo e Saneamento</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="90.jpeg" alt="Problema de lixo">
+                    <p class="description">Lixo acumulado nas ruas, afetando o saneamento.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="91.jpeg" alt="Problema de lixo">
+                    <p class="description">Falta de lixeiras e sujeira espalhada pelas vias públicas.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="92.jpeg" alt="Problema de lixo">
+                    <p class="description">Falta de coleta de lixo regular, causando acúmulo de resíduos.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="93.jpeg" alt="Problema de lixo">
+                    <p class="description">Falta de conscientização sobre o descarte correto de resíduos.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="94.jpeg" alt="Problema de lixo">
+                    <p class="description">Lixo invadindo a calçada, dificultando a passagem de pedestres.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="95.jpeg" alt="Problema de lixo">
+                    <p class="description">Lixo tóxico e materiais perigosos fora do lugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab3" class="tab-content">
+            <h2>Iluminação Pública</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="foto7.jpg" alt="Iluminação pública">
+                    <p class="description">Lâmpadas queimadas, causando escuridão nas ruas.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="foto8.jpg" alt="Iluminação pública">
+                    <p class="description">Pontos de iluminação pública mal posicionados.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="foto9.jpg" alt="Iluminação pública">
+                    <p class="description">Postes de iluminação pública danificados.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab4" class="tab-content">
+            <h2>Buracos nas Ruas</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="foto10.jpg" alt="Buracos nas ruas">
+                    <p class="description">Buracos profundos nas ruas, causando risco para motoristas e pedestres.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="foto11.jpg" alt="Buracos nas ruas">
+                    <p class="description">Acúmulo de água nos buracos devido à falta de drenagem.</p>
+                </div>
+                <div class="photo-item">
+                    <img src="foto12.jpg" alt="Buracos nas ruas">
+                    <p class="description">Buracos mal sinalizados, causando acidentes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Problemas no Bairro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('nav a');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(tab.getAttribute('href'));
+                
+                tabContents.forEach(content => content.classList.remove('active'));
+                tabs.forEach(t => t.classList.remove('active'));
+
+                target.classList.add('active');
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
